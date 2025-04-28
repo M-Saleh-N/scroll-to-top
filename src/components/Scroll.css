@@ -6,5 +6,24 @@
     color: #f1f1f1;
     position: relative;
   }
-
   
+  .car-fact-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .car-fact {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .car-fact:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+  }
+  
+ 
