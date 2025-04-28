@@ -17,3 +17,39 @@ const carFacts = [
   "The first speeding ticket was issued in 1896 for driving 8 mph!"
 ];
 
+const CarScroll = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  const handleScroll = () => {
+    setShowButton(window.scrollY > 20);
+  };
+
+  const goToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="car-container">
+      <div className="car-fact-list">
+        {carFacts.map((fact, index) => (
+          <p key={index} className="car-fact">
+            {fact}
+          </p>
+        ))}
+      </div>
+
+      {showButton && (
+        <button className="car-scroll-top" onClick={goToTop}>
+          🚗⬆️
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default CarScroll;
