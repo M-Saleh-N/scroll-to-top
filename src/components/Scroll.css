@@ -26,4 +26,23 @@
     transform: translateX(10px);
   }
   
- 
+  .car-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ff4b2b;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .car-scroll-top:hover {
+    background: #ff6f61;
+    transform: scale(1.1);
+  }
+  
